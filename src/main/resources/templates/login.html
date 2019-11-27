@@ -44,11 +44,11 @@ function login() {
 	    },
 	    success:function(data){
 	    	var flag = data.success;
-	    	console.log("当前登录用户是====="+data.success);
 	    	if(flag){
+	    	console.log("当前登录用户是====="+data.data.info.username);
 	    		$(location).attr('href', '/api/index');
 	    	}else{
-	    		$("#msg").html("<font color='red'>"+data.msg+"</font>");
+	    		$("#msg").html("<font color='red'>"+data.data.msg+"</font>");
 	    	}
 	    },
 	    complete:function(data){
